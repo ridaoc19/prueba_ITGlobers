@@ -1,0 +1,57 @@
+@use "sass:map";
+@use './variables' as v;
+
+
+@mixin home_container {
+
+  @media (min-width: map.get(v.$respons, "xs")) {
+    grid-template: {
+      columns: 1fr;
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas: 
+      "home_carousel" 
+      "home_articules" 
+      "home_instagram" 
+      "home_form" 
+      "home_footer";
+    }  
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    grid-template: {
+      columns: 1fr;
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas:
+      "home_carousel" 
+      "home_articules" 
+      "home_instagram" 
+      "home_form" 
+      "home_footer";
+    }
+  }
+}
+
+$home_name: home_carousel, home_articules, home_instagram, home_form, home_footer;
+
+
+@mixin navbar_container {
+
+  @media (min-width: map.get(v.$respons, "xs")) {
+    grid-template: {
+      columns: repeat(auto-fit, minmax(10px, 1fr));
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas: "navbar_left navbar_center navbar_right";
+    }
+    
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    grid-template: {
+      columns: repeat(auto-fit, minmax(10px, 1fr));
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas: "navbar_left navbar_center navbar_right";
+    }
+  }
+}
+
+$navbar_name: navbar_left;

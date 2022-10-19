@@ -1,0 +1,19 @@
+@use "sass:map";
+@use '../scss/abstracts/variables' as v ;
+@use '../scss/abstracts/mixins' as m ;
+
+
+@each $home_name in m.$home_name {
+  .#{$home_name} {
+    grid-area: $home_name;
+  }
+}
+
+.home_container {
+  background-color: map.get(v.$color, "azul_oscuro");
+  display: grid;
+  @include m.home_container()
+}
+
+
+

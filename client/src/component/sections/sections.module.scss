@@ -1,0 +1,38 @@
+@use "sass:map";
+@use '../../scss/abstracts/variables' as v;
+@use '../../scss/abstracts/mixins' as m;
+
+.carousel_container {
+  display: grid;
+  height: 100vh;
+  grid-template: {
+    columns: 1fr;
+    rows:repeat(3, minmax(10px, 100vh));
+  }
+
+  img{
+    height: 100%;
+    width: 100%;
+    // object-fit: contain;
+  }
+  .carousel_navbar{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .carousel_image{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .carousel_button{
+    grid-column: 1;
+    grid-row: 3 / 3;
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+    gap: 10px;
+    margin: 10px;
+  }
+
+}

@@ -1,0 +1,31 @@
+
+@use "sass:map";
+@use '../../scss/abstracts/variables' as v ;
+@use '../../scss/abstracts/mixins' as m ;
+
+
+.navbar_container{
+  // background-color: map.get(v.$color, "azul_oscuro");
+  display: grid;
+  @include m.navbar_container();
+
+  .navbar_left {
+    grid-area: navbar_left;
+    display: flex;
+    place-self: center start;
+  }
+
+  .navbar_center{
+    grid-area: navbar_center;
+    display: flex;
+    place-content: center;
+    gap: 10px;
+
+  }
+  .navbar_right{
+    grid-area: navbar_right;
+    display: flex;
+    place-self: center end;
+    gap: 10px;
+  }
+}
