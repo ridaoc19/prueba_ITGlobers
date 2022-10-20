@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // RUTAS
-router.use('/count', require('./src/modules/count/controller.js'));
+router.use('/registration', require('./src/modules/registration/controller.js'));
 
 module.exports = router;
 
