@@ -2,6 +2,7 @@
 @use '../../scss/abstracts/variables' as v;
 @use '../../scss/abstracts/mixins' as m;
 
+// CAROUSEL
 .carousel_container {
   display: grid;
   height: 100vh;
@@ -31,10 +32,10 @@
     align-self: flex-end;
     gap: 10px;
     margin: 10px;
-  }  
+  }
 }
 
-
+// ATICULES
 .articules_container {
   display: grid;
   @include m.articules_container();
@@ -44,6 +45,7 @@
 @each $articules1_name in m.$articules1_name {
   .#{$articules1_name} {
     grid-area: $articules1_name;
+
     img {
       max-height: 400px;
       width: 100%;
@@ -56,9 +58,12 @@
 @each $articules2_name in m.$articules2_name {
   .#{$articules2_name} {
     grid-area: $articules2_name;
+
     display: grid;
     justify-items: center;
     align-content: center;
+    min-height: 400px;
+
     img {
       height: 100px;
       width: 100px;

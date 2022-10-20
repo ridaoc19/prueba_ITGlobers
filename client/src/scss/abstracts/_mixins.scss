@@ -1,7 +1,7 @@
 @use "sass:map";
 @use './variables' as v;
 
-
+// HOME
 @mixin home_container {
 
   @media (min-width: map.get(v.$respons, "xs")) {
@@ -33,7 +33,7 @@
 
 $home_name: home_carousel, home_articules, home_instagram, home_form, home_footer;
 
-
+// NAVBAR
 @mixin navbar_container {
 
   @media (min-width: map.get(v.$respons, "xs")) {
@@ -82,7 +82,7 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
 
 $navbar_name: navbar_left;
 
-
+// CAROUSEL
 @mixin carousel_container {
 
   @media (min-width: map.get(v.$respons, "xs")) {
@@ -108,7 +108,7 @@ $navbar_name: navbar_left;
 
 $navbar_name: navbar_left;
 
-
+// ARTICULES
 @mixin articules_container {
 
   @media (min-width: map.get(v.$respons, "xs")) {
@@ -136,12 +136,6 @@ $navbar_name: navbar_left;
   }
 }
 
-$articules1_name: aticules_1_PUFF,
-  aticules_1_RAIN,
-  aticules_1_CART,
-  aticules_1_NAP;
+$articules1_name: aticules_1_PUFF,  aticules_1_RAIN,  aticules_1_CART, aticules_1_NAP;
 
-$articules2_name: aticules_2_PUFF,
-  aticules_2_RAIN,
-  aticules_2_CART,
-  aticules_2_NAP;
+$articules2_name: aticules_2_PUFF,  aticules_2_RAIN,  aticules_2_CART, aticules_2_NAP;
