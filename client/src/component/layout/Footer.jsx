@@ -9,7 +9,7 @@ function Footer(props) {
         <div className={style.footer_title}>
           <h1>Pufi</h1>
           <ul>
-            {images.icons.map((e) => <div ><li>PUFI {e.name}</li></div>)}
+            {images.icons.map((e) => <div key={e.name} ><li>PUFI {e.name}</li></div>)}
           </ul>
         </div>
         <div className={style.footer_contact}>
@@ -24,7 +24,7 @@ function Footer(props) {
           <h5>COMPRA 100% SEGURA</h5>
           <ul>
             {images.security.map((e, i) => <li key={i}>{e}</li>)}
-          <p>COMPRÁ CON LA GARANTÁ DE PUFI</p>
+            <p>COMPRÁ CON LA GARANTÁ DE PUFI</p>
           </ul>
         </div>
         <div className={style.footer_social}>

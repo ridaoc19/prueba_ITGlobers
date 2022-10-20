@@ -6,7 +6,7 @@ function NavBar(props) {
     <>
       <div className={style.navbar_container}>
         <div className={style.navbar_left}>
-          <h1>PUFFI</h1>
+          <h1>PUFI</h1>
         </div>
 
         <div className={style.navbar_center}>
