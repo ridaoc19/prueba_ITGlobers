@@ -78,8 +78,6 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
       gap: 30px;
     }
   }
-
-
 }
 
 $navbar_name: navbar_left;
@@ -115,7 +113,7 @@ $navbar_name: navbar_left;
 
   @media (min-width: map.get(v.$respons, "xs")) {
     grid-template: {
-      columns:  1fr;
+      columns: 1fr;
       rows: repeat(auto-fit, minmax(10px, 1fr));
       areas:
         "aticules_1_PUFF" "aticules_2_PUFF"

@@ -10,7 +10,7 @@
 }
 
 .home_container {
-  background-color: map.get(v.$color, "azul_oscuro");
+  // background-color: map.get(v.$color, "azul_oscuro");
   display: grid;
   @include m.home_container()
 }
