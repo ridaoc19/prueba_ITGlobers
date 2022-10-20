@@ -53,7 +53,6 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
       grid-area: navbar_right;
       display: flex;
       place-self: center;
-
       gap: 10px;
     }
 
@@ -65,18 +64,18 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
       rows: repeat(auto-fit, minmax(10px, 1fr));
       areas: "navbar_left navbar_center navbar_right";
     }
+
     .navbar_left {
       grid-area: navbar_left;
       display: flex;
       place-self: center start;
-  
     }
-  
+
     .navbar_right {
       grid-area: navbar_right;
       display: flex;
       place-self: center end;
-      gap: 10px;
+      gap: 30px;
     }
   }
 
@@ -84,3 +83,67 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
 }
 
 $navbar_name: navbar_left;
+
+
+@mixin carousel_container {
+
+  @media (min-width: map.get(v.$respons, "xs")) {
+    img {
+      min-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+      // object-fit: contain;
+    }
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      // object-fit: contain;
+    }
+  }
+
+
+}
+
+$navbar_name: navbar_left;
+
+
+@mixin articules_container {
+
+  @media (min-width: map.get(v.$respons, "xs")) {
+    grid-template: {
+      columns:  1fr;
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas:
+        "aticules_1_PUFF" "aticules_2_PUFF"
+        "aticules_1_RAIN" "aticules_2_RAIN"
+        "aticules_1_CART" "aticules_2_CART"
+        "aticules_1_NAP" "aticules_2_NAP";
+    }
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    grid-template: {
+      columns: repeat(2, minmax(10px, 1fr));
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas:
+        "aticules_1_PUFF aticules_2_PUFF"
+        "aticules_2_RAIN aticules_1_RAIN"
+        "aticules_1_CART aticules_2_CART"
+        "aticules_2_NAP  aticules_1_NAP";
+    }
+  }
+}
+
+$articules1_name: aticules_1_PUFF,
+  aticules_1_RAIN,
+  aticules_1_CART,
+  aticules_1_NAP;
+
+$articules2_name: aticules_2_PUFF,
+  aticules_2_RAIN,
+  aticules_2_CART,
+  aticules_2_NAP;

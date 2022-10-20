@@ -1,0 +1,47 @@
+.navbar_container {
+  display: grid;
+  margin: 10px;
+}
+@media (min-width: 0px) {
+  .navbar_container {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-areas: "navbar_left" "navbar_center" "navbar_right";
+  }
+  .navbar_container .navbar_left {
+    grid-area: navbar_left;
+    display: flex;
+    place-self: center;
+  }
+  .navbar_container .navbar_right {
+    grid-area: navbar_right;
+    display: flex;
+    place-self: center;
+    gap: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar_container {
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(10px, 1fr));
+    grid-template-areas: "navbar_left navbar_center navbar_right";
+  }
+  .navbar_container .navbar_left {
+    grid-area: navbar_left;
+    display: flex;
+    place-self: center start;
+  }
+  .navbar_container .navbar_right {
+    grid-area: navbar_right;
+    display: flex;
+    place-self: center end;
+    gap: 30px;
+  }
+}
+.navbar_container .navbar_center {
+  grid-area: navbar_center;
+  display: flex;
+  place-content: center;
+  gap: 20px;
+  margin: 5px;
+}/*# sourceMappingURL=layout.module.css.map */

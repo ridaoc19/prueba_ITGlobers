@@ -5,27 +5,25 @@
 .carousel_container {
   display: grid;
   height: 100vh;
+
   grid-template: {
     columns: 1fr;
-    rows:repeat(3, minmax(10px, 100vh));
+    rows: repeat(3, minmax(10px, 100vh));
   }
 
-  img{
-    // height: 100%;
-    width: 100%;
-    // object-fit: contain;
-  }
-  .carousel_navbar{
+  @include m.carousel_container();
+
+  .carousel_navbar {
     grid-column: 1;
     grid-row: 1;
   }
 
-  .carousel_image{
+  .carousel_image {
     grid-column: 1 / -1;
     grid-row: 1 / -1;
   }
 
-  .carousel_button{
+  .carousel_button {
     grid-column: 1;
     grid-row: 3 / 3;
     display: flex;
@@ -33,6 +31,40 @@
     align-self: flex-end;
     gap: 10px;
     margin: 10px;
-  }
+  }  
+}
+
+
+
+.articules_container {
+  display: grid;
+  @include m.articules_container();
 
 }
+
+@each $articules1_name in m.$articules1_name {
+  .#{$articules1_name} {
+    grid-area: $articules1_name;
+    img {
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
+      // object-fit: contain;
+    }
+  }
+}
+
+@each $articules2_name in m.$articules2_name {
+  .#{$articules2_name} {
+    grid-area: $articules2_name;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    img {
+      height: 100px;
+      width: 100px;
+      object-fit: contain;
+    }
+  }
+}
+
