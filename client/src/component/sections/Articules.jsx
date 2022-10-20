@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import images from "../../scss/images/images.js";
 
 function Articules(props) {
@@ -12,13 +12,12 @@ function Articules(props) {
             </div>
             <div className={`aticules_2_${e.name}`}>
               <img src={e.url2} alt="img" />
-              <h3>{e.name}</h3>
+              <h2>{e.name}</h2>
               <h5>{e.description}</h5>
-              {/* <a href="#">Detalle</a> */}
+            <Link to="/">{`> VER MAS`}</Link>
             </div>
           </>
         ))}
-        {/* <Link to="/">Detalle</Link> */}
       </div>
     </div>
   );

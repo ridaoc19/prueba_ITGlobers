@@ -19,7 +19,7 @@ module.exports = {
     Globers.findOne({
       email: req.body.email,
     }).then(data => {
-      if (data !== null) return res.status(200).json({message: `El correo electronico ${data.email} ya se encuentra registrado`})
+      if (data !== null) return res.status(200).json({message: data.email})
       Globers.create(req.body)
         .then((data) => {
           res.status(200).json(data)

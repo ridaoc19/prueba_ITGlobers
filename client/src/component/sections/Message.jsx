@@ -17,12 +17,11 @@ function Message(props) {
     case "onClick":
       return validation = "Para registrarse debe ingresar un correo valido"
 
-
     case "registered":
-      return validation = props.state.payload
+      return validation = <div>El correo electronico <u>{props.state.payload}</u> ya se encuentra registrado</div>
 
     case "success":
-      return validation = `El correo electronico ${props.state.payload} fue registrado correctamente`
+      return validation = <div>El correo electronico <u>{props.state.payload}</u> fue registrado correctamente</div>
 
     default:
       break;
@@ -30,7 +29,7 @@ function Message(props) {
 
   return (
     <div>
-      <h5>{validation}</h5>
+      {validation}
     </div>
   );
 }

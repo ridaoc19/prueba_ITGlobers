@@ -14,30 +14,38 @@ function Form(props) {
   const messageRegistro = useSelector(state => state.messageRegistro)
 
   const [input, setInput] = useState("")
-  const [error, setError] = useState({type: "initial"})
+  const [error, setError] = useState({type: "initial", css: ""})
 
   const validationEmail = (value) =>{
   return !/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,67}$/i.test(value)
   }  
   const handleOnChange = (e) => {
-
-    validationEmail(e.target.value)?
-      setError({type: "validation"}) : setError({type: "verified"});
+    if(e.target.value === ""){
+      setError({type: "initial", css: ""})
+    } else if(validationEmail(e.target.value)){
+      setError({type: "validation", css: "alert"})
+    } else{
+      setError({type: "verified", css: ""})
+    }
     setInput(e.target.value);
   }
 
   const handleOnClick = (e) => {
     e.preventDefault();
-    if(validationEmail(input)) return setError({type: "onClick"})
+    if(validationEmail(input)) return setError({type: "onClick", css: "alert"})
     dispatch(registration({ email: input }))
   }
 
   useEffect(() => {
     if(messageRegistro?.message){
-      setError({type: "registered", payload: messageRegistro.message})
+      setError({type: "registered", payload: messageRegistro.message, css: "alert"})
     }else if(messageRegistro?.email){
-      setError({type: "success", payload: messageRegistro.email})
+      setError({type: "success", payload: messageRegistro.email, css: "success"})
+      setInput("")
     }
+    setTimeout(() => {
+      setError({type: "initial"})
+    }, 5000);
   },[messageRegistro])
 
   return (
@@ -55,7 +63,7 @@ function Form(props) {
               <button onClick={(e) => handleOnClick(e)}>{image.arrow}</button>
             </div>
           </form>
-              <Message state={error}/>
+              <h4 className={style[`form_${error.css}`]}><Message state={error}/></h4>
         </div>
       </div>
     </div>
