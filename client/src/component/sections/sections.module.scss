@@ -72,3 +72,91 @@
   }
 }
 
+//INSTAGRAM
+.instagram_container {
+  margin: 40px;
+  display: grid;
+
+  grid-template: {
+    columns: repeat(1, minmax(10px, 1fr));
+    rows: repeat(auto-fit, minmax(10px, 1fr));
+    areas:
+      "instagram_title" "instagram_images";
+  }
+
+  justify-items: center;
+  gap: 10px;
+
+  .instagram_title {
+    grid-area: instagram_title;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 5px
+  }
+
+  @include m.instagram_container();
+
+
+  img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+  }
+}
+
+// FORM
+.form_container {
+  display: grid;
+
+  grid-template: {
+    columns: repeat(1, minmax(10px, 1fr));
+    rows: repeat(auto-fit, minmax(10px, 1fr));
+    areas:
+      "instagram_title" "form_formulario";
+  }
+
+  place-items: center;
+  gap: 10px;
+
+  .form_title {
+    grid-area: instagram_title;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 5px;
+  }
+
+  .form_formulario {
+    background: transparent;
+    grid-area: form_formulario;
+
+
+    .button {
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+      border-color: black;
+      border-width: 1px;
+      border-style: solid;
+      justify-content: space-between;
+      padding: 10px;
+
+      button {
+        background: transparent;
+        border: none;
+
+      }
+
+      input {
+        width: 280px;
+        outline: none;
+        background-color: none;
+        border: 0;
+      }
+    }
+
+  }
+
+
+}

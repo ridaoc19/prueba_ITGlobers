@@ -1,4 +1,32 @@
+
+
 * {
   margin: 0;
   padding: 0;
+}
+
+:root {
+  font-family: 'Poppins', sans-serif;
+
+  a {
+    display: inline-block;
+    position: relative;
+    color: rgb(34, 43, 69);
+    text-decoration: none;
+
+    &:after {
+      content: "";
+      display: block;
+      margin: auto;
+      height: 2px;
+      width: 0px;
+      transition: all .5s;
+    }
+
+    &:hover:after {
+      width: 100%;
+      background: rgb(34, 43, 69);
+    }
+  }
+
 }

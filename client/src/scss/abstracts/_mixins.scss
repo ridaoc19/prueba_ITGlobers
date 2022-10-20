@@ -136,6 +136,68 @@ $navbar_name: navbar_left;
   }
 }
 
-$articules1_name: aticules_1_PUFF,  aticules_1_RAIN,  aticules_1_CART, aticules_1_NAP;
+$articules1_name: aticules_1_PUFF, aticules_1_RAIN, aticules_1_CART, aticules_1_NAP;
 
-$articules2_name: aticules_2_PUFF,  aticules_2_RAIN,  aticules_2_CART, aticules_2_NAP;
+$articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_NAP;
+
+
+// INSTAGRAM
+@mixin instagram_container {
+
+  @media (min-width: map.get(v.$respons, "xs")) {
+    .instagram_images {
+      grid-area: instagram_images;
+      max-height: 300px;
+      max-width: auto;
+      display: grid;
+
+      grid-template: {
+        columns: repeat(2, minmax(10px, 1fr));
+        rows: repeat(auto-fit, minmax(10px, 1fr));
+
+      }
+    }
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    .instagram_images {
+      grid-area: instagram_images;
+      max-height: 200px;
+      max-width: auto;
+      display: grid;
+
+      grid-template: {
+        columns: repeat(3, minmax(10px, 1fr));
+        rows: repeat(auto-fit, minmax(10px, 1fr));
+
+      }
+    }
+  }
+}
+
+//FOOTER
+@mixin footer_container {
+  @media (min-width: map.get(v.$respons, "xs")) {
+    grid-template: {
+      columns: repeat(auto-fit, minmax(10px, 1fr));
+      rows: repeat(auto-fit, minmax(10px, 1fr));
+      areas:
+      "footer_title footer_contact"
+      "footer_buy   footer_social"
+      "footer_info  footer_info";
+    }
+  }
+
+  @media (min-width: map.get(v.$respons, "md")) {
+    grid-template: {
+      columns: repeat(auto-fit, minmax(10px, 1fr));
+      rows: minmax(10px, 1fr) minmax(10px, 30px);
+      areas:
+      "footer_title footer_contact footer_buy   footer_social"
+      "footer_info  footer_info    footer_info  footer_info";
+    }
+  }
+
+}
+
+$footer_name: footer_title, footer_content, footer_contact, footer_buy, footer_social, footer_info;
