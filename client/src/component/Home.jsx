@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "./sections/Carousel";
 import style from "./home.module.scss";
 import Footer from "./layout/Footer";
-import NavBar from "./layout/NavBar";
 import Articules from "./sections/Articules";
 import Instagram from "./sections/Instagram";
 import Form from "./sections/Form";

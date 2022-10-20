@@ -8,13 +8,13 @@
     grid-template: {
       columns: 1fr;
       rows: repeat(auto-fit, minmax(10px, 1fr));
-      areas: 
-      "home_carousel" 
-      "home_articules" 
-      "home_instagram" 
-      "home_form" 
-      "home_footer";
-    }  
+      areas:
+        "home_carousel"
+        "home_articules"
+        "home_instagram"
+        "home_form"
+        "home_footer";
+    }
   }
 
   @media (min-width: map.get(v.$respons, "md")) {
@@ -22,11 +22,11 @@
       columns: 1fr;
       rows: repeat(auto-fit, minmax(10px, 1fr));
       areas:
-      "home_carousel" 
-      "home_articules" 
-      "home_instagram" 
-      "home_form" 
-      "home_footer";
+        "home_carousel"
+        "home_articules"
+        "home_instagram"
+        "home_form"
+        "home_footer";
     }
   }
 }
@@ -40,9 +40,23 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
     grid-template: {
       columns: repeat(auto-fit, minmax(10px, 1fr));
       rows: repeat(auto-fit, minmax(10px, 1fr));
-      areas: "navbar_left navbar_center navbar_right";
+      areas: "navbar_left" "navbar_center" "navbar_right";
     }
-    
+
+    .navbar_left {
+      grid-area: navbar_left;
+      display: flex;
+      place-self: center;
+    }
+
+    .navbar_right {
+      grid-area: navbar_right;
+      display: flex;
+      place-self: center;
+
+      gap: 10px;
+    }
+
   }
 
   @media (min-width: map.get(v.$respons, "md")) {
@@ -51,7 +65,22 @@ $home_name: home_carousel, home_articules, home_instagram, home_form, home_foote
       rows: repeat(auto-fit, minmax(10px, 1fr));
       areas: "navbar_left navbar_center navbar_right";
     }
+    .navbar_left {
+      grid-area: navbar_left;
+      display: flex;
+      place-self: center start;
+  
+    }
+  
+    .navbar_right {
+      grid-area: navbar_right;
+      display: flex;
+      place-self: center end;
+      gap: 10px;
+    }
   }
+
+
 }
 
 $navbar_name: navbar_left;
