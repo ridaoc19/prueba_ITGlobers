@@ -17,7 +17,7 @@ export default function Presentation(props) {
             Pufi, como requerimiento se debe trabajar con React, Redux, Css (opcional Sass), se califica
             la maquetación y control de formulario <br/><Link to={"/home"} className={style.button}>Ingresar a la aplicacion</Link></p>
           <div>
-            <ReactPlayer url='https://vimeo.com/762578074' width='100%' height='100%' />
+            <ReactPlayer url='https://vimeo.com/762677404' width='100%' height='100%' />
           </div>
         </div>
       
