@@ -1,4 +1,7 @@
+import images from "../scss/images/images";
+
 export const FORM_REGISTRATION = "FORM_REGISTRATION";
+export const DETAIL_ARTICULES = "DETAIL_ARTICULES";
 
 export function registration(input) {
   return function (dispatch) {
@@ -12,4 +15,13 @@ export function registration(input) {
       .catch((error) => console.error("Error:", error))
       .then((data) => {dispatch({ type: FORM_REGISTRATION, payload: data })});
   };
+}
+
+export function detailArticules(id) {
+  let detail = images.icons.filter(e => e.name === id)
+  console.log(detail[0])
+  return {
+    type: DETAIL_ARTICULES,
+    payload: detail[0],
+  }
 }

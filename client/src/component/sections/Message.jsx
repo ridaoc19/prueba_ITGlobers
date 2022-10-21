@@ -14,6 +14,9 @@ function Message(props) {
     case "verified":
       return validation = ""
 
+      case "length":
+        return validation = "No puede tener mas de 45 caracteres"
+
     case "onClick":
       return validation = "Para registrarse debe ingresar un correo valido"
 

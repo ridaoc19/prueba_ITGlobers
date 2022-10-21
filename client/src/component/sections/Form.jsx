@@ -24,7 +24,9 @@ function Form(props) {
       setError({type: "initial", css: ""})
     } else if(validationEmail(e.target.value)){
       setError({type: "validation", css: "alert"})
-    } else{
+    } else if(e.target.value.length >= 45){
+      setError({type: "length", css: "alert"})
+    }else{
       setError({type: "verified", css: ""})
     }
     setInput(e.target.value);

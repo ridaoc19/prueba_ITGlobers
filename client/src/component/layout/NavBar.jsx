@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import images from "../../scss/images/images.js";
 import style from "./layout.module.scss";
 
@@ -6,7 +7,9 @@ function NavBar(props) {
     <>
       <div className={style.navbar_container}>
         <div className={style.navbar_left}>
+          <Link to={"/"}>
           <h1>PUFI</h1>
+          </Link>
         </div>
 
         <div className={style.navbar_center}>

@@ -14,7 +14,7 @@ function Articules(props) {
               <img src={e.url2} alt="img" />
               <h2>{e.name}</h2>
               <h5>{e.description}</h5>
-            <Link to="/">{`> VER MAS`}</Link>
+              <Link to={`/detail/${e.name}`}>{`> VER MAS`}</Link>
             </div>
           </>
         ))}
