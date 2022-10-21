@@ -12,3 +12,9 @@
 
 - **Backend**: Node js, Axios, Espress, Mongoose, Mongo DB
 
+
+## Deploy
+
+- **Frontend**: <a href=" https://itglobers-six.vercel.app/" target="_blank">Vercel</a>
+- **Backend**: Render
+
