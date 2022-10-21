@@ -142,7 +142,7 @@
     display: grid;
     align-self: start;
     justify-items: center;
-    
+
     .button {
       display: flex;
       flex-direction: row;
@@ -163,26 +163,24 @@
         border-radius: 4px;
         display: flex;
         justify-content: center;
-        
+
         &:before {
           content: "»";
           opacity: 0;
           margin-left: -15px;
           transition-duration: 0.2s;
-         }
-         &:hover:before {
+        }
+
+        &:hover:before {
           margin-left: 0px;
           opacity: 1;
-         }
-         &:hover {
+        }
+
+        &:hover {
           color: rgb(0, 171, 85);
           background: rgba(0, 0, 0, 0.02);
           border: solid 1px gainsboro;
-  
-
-       }
-
-
+        }
       }
 
       input {
@@ -191,27 +189,82 @@
         background-color: none;
         border: 0;
       }
-
     }
 
     .form_alert {
       color: #a51b0b;
-      u{
+
+      u {
         color: rgb(26, 33, 56);
       }
-
-
     }
 
     .form_success {
       color: #00773b;
-      u{
+
+      u {
         color: rgb(26, 33, 56);
-        
       }
     }
 
   }
+}
 
+.scanner h1 {
+  color: transparent;
+  font-size: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
 
+.scanner h1::before {
+  content: "Loading...";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-right: 4px solid rgb(0, 171, 85);
+  overflow: hidden;
+  color: rgb(0, 171, 85);
+  animation: load91371 2s linear infinite;
+}
+
+@keyframes load91371 {
+
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  10%,
+  20%,
+  30%,
+  40%,
+  50%,
+  60%,
+  70%,
+  80%,
+  90%,
+  100% {
+    border-right-color: transparent;
+  }
+
+  11%,
+  21%,
+  31%,
+  41%,
+  51%,
+  61%,
+  71%,
+  81%,
+  91% {
+    border-right-color: rgb(0, 171, 85);
+  }
+
+  60%,
+  80% {
+    width: 100%;
+  }
 }

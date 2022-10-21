@@ -11,7 +11,8 @@ import { useEffect } from 'react';
 function Form(props) {
   const dispatch = useDispatch();
 
-  const messageRegistro = useSelector(state => state.messageRegistro)
+  const messageRegistro = useSelector(state => state.messageRegistro);
+  const loading = useSelector(state => state.loading);
 
   const [input, setInput] = useState("")
   const [error, setError] = useState({type: "initial", css: ""})
@@ -65,7 +66,7 @@ function Form(props) {
               <button onClick={(e) => handleOnClick(e)}>{image.arrow}</button>
             </div>
           </form>
-              <h4 className={style[`form_${error.css}`]}><Message state={error}/></h4>
+            {loading? <div className={style.scanner}><h1>Cargando...</h1></div>:<h4 className={style[`form_${error.css}`]}><Message state={error}/></h4>}
         </div>
       </div>
     </div>

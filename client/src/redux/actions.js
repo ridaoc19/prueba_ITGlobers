@@ -2,9 +2,11 @@ import images from "../scss/images/images";
 
 export const FORM_REGISTRATION = "FORM_REGISTRATION";
 export const DETAIL_ARTICULES = "DETAIL_ARTICULES";
+export const LOADING = "LOADING";
 
 export function registration(input) {
   return function (dispatch) {
+    dispatch({ type: LOADING })
     return fetch(`${process.env.REACT_APP_URL}/registration`, {
       method: "POST",
       body: JSON.stringify(input),
