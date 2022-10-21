@@ -182,10 +182,11 @@ $articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_
       columns: repeat(auto-fit, minmax(10px, 1fr));
       rows: repeat(auto-fit, minmax(10px, 1fr));
       areas:
-      "footer_title" "footer_contact"
-      "footer_buy"   "footer_social"
-      "footer_info";
+        "footer_title" "footer_contact"
+        "footer_buy" "footer_social"
+        "footer_info";
     }
+
     justify-items: stretch;
     text-align: center;
   }
@@ -195,14 +196,16 @@ $articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_
       columns: repeat(auto-fit, minmax(10px, 1fr));
       rows: minmax(10px, 1fr) minmax(10px, 30px);
       areas:
-      "footer_title footer_contact footer_buy   footer_social"
-      "footer_info  footer_info    footer_info  footer_info";
+        "footer_title footer_contact footer_buy   footer_social"
+        "footer_info  footer_info    footer_info  footer_info";
     }
+
     justify-items: normal;
     text-align: start;
-    
+
   }
 
 }
 
 $footer_name: footer_title, footer_content, footer_contact, footer_buy, footer_social, footer_info;
+

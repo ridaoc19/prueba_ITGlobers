@@ -24,7 +24,7 @@ function Footer(props) {
           <h5>COMPRA 100% SEGURA</h5>
           <ul>
             {images.security.map((e, i) => <li key={i}>{e}</li>)}
-            <p>COMPRÁ CON LA GARANTÁ DE PUFI</p>
+            <p>COMPRÁ CON LA GARANTIÁ DE PUFI</p>
           </ul>
         </div>
         <div className={style.footer_social}>

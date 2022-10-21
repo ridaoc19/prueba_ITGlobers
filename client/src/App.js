@@ -3,12 +3,14 @@ import './App.scss';
 import Detail from './component/Detail';
 import Home from './component/Home';
 import Layout from './component/layout/Layout';
+import Presentation from './component/presentation/Presentation';
 
 function App() {
   return (
     <div className="App">
        <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Presentation/>}/>
+        <Route path="/home" element={<Home/>}/>
         <Route path="/detail/:id" element={<Layout><Detail/></Layout>}/>
       </Routes>
     </div>

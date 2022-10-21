@@ -7,7 +7,7 @@ function NavBar(props) {
     <>
       <div className={style.navbar_container}>
         <div className={style.navbar_left}>
-          <Link to={"/"}>
+          <Link to={"/home"}>
           <h1>PUFI</h1>
           </Link>
         </div>
@@ -21,8 +21,8 @@ function NavBar(props) {
           ))}
         </div>
         <div className={style.navbar_right}>
-          <h5>MI CUENTA</h5>
-          <h5>MI COMPRA</h5>
+          <Link to={"/"}>MI CUENTA</Link>
+          <Link>MI COMPRA</Link>
         </div>
       </div>
     </>

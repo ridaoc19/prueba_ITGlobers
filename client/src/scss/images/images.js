@@ -39,7 +39,7 @@ export default {
   ],
 
   carousel: [
-    "https://images.pexels.com/photos/404960/pexels-photo-404960.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "https://images.pexels.com/photos/871060/pexels-photo-871060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://acortar.link/epopXD",
     "https://acortar.link/G6S3Bv",
   ],

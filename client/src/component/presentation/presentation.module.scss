@@ -1,0 +1,154 @@
+@use "sass:map";
+@use '../../scss/abstracts/variables' as var;
+@use '../../scss/abstracts/mixins' as mixin;
+
+// PRESENTARION
+.presentation_container {
+  padding: 10px;
+  background-color: map.get(var.$color, "azul_oscuro");
+  color: map.get(var.$color, "gris_claro");
+  height: 100vh;
+  display: grid;
+
+  grid-template: {
+    columns: 1fr;
+    rows: auto auto auto auto;
+    areas:
+      "presentation_title"
+      "presentation_video"
+      "presentation_tecnologies"
+      "presentation_footer";
+  }
+  gap: 10px;
+
+  .presentation_title {
+    grid-area: presentation_title;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1{
+      font-size: x-large;
+    }
+  }
+
+  .presentation_video {
+    grid-area: presentation_video;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template: {
+      columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    p{
+      font-size:small;
+      text-align: justify;
+
+      .button {
+        margin: 3px;
+        margin-left: 27%;
+        padding: 0.1em 1.8em;
+        border: 2px solid #17C3B2;
+        position: relative;
+        overflow: hidden;
+        background-color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 12px;
+        transition: .3s;
+        z-index: 1;
+        font-family: inherit;
+        color: #17C3B2;
+       }
+       
+       .button::before {
+        content: '';
+        width: 0;
+        height: 300%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background: #17C3B2;
+        transition: .5s ease;
+        display: block;
+        z-index: -1;
+       }
+       
+       .button:hover::before {
+        width: 105%;
+       }
+       
+       .button:hover {
+        color: #111;
+       }
+    }
+
+  }
+
+  .presentation_tecnologies {
+    grid-area: presentation_tecnologies;
+    display: grid;
+
+    grid-template: {
+      columns: 1fr;
+      rows: auto auto;
+      areas: "tecnologies_title" "tecnologies_content";
+
+    }
+
+    .tecnologies_title {
+      grid-area: tecnologies_title;
+      place-self: center;
+
+      h2{
+        font-size: large;
+        text-align: center;
+      }
+    }
+
+    .tecnologies_content {
+      grid-area: tecnologies_content;
+
+      ul {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        justify-items: center;
+    
+        h4 {
+          font-size: small;
+          text-align: center;
+          margin: 5px;
+        }
+
+        img {
+          width: 35px;
+        }
+      }
+
+    }
+
+  }
+
+  .presentation_footer {
+    grid-area: presentation_footer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .footer_name{
+      text-align: center;
+    }
+    .footer_social{
+      display: flex;
+      justify-content: space-evenly;
+
+      img{
+        width: 35px;
+      }
+    }
+  }
+
+}
