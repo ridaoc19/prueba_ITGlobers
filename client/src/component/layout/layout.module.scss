@@ -19,9 +19,9 @@ p {
   @include m.navbar_container();
   margin: 10px;
 
- 
-  h5{
-    font-size:small;
+
+  h5 {
+    font-size: small;
   }
 
   .navbar_center {
@@ -30,7 +30,8 @@ p {
     place-content: center;
     gap: 20px;
     margin: 5px;
-    div{
+
+    div {
       font-size: large;
     }
   }
@@ -121,24 +122,24 @@ p {
   }
 }
 
-
-
-
 // LAYOUT
 .layout_container {
   max-height: 100vh;
   display: grid;
+
   grid-template: {
     columns: 1fr;
     rows: auto 60vh auto;
     areas: "layout_navbar" "layout_children" "layout_footer";
   }
-  .layout_children{
+
+  .layout_children {
     grid-area: layout_children;
     display: grid;
     align-items: center;
   }
 }
+
 $layout_name: layout_navbar layout_footer;
 
 @each $layout_name in $layout_name {

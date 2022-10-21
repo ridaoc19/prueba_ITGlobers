@@ -99,11 +99,8 @@ $navbar_name: navbar_left;
       height: 100%;
       width: 100%;
       object-fit: cover;
-      // object-fit: contain;
     }
   }
-
-
 }
 
 $navbar_name: navbar_left;
@@ -154,7 +151,6 @@ $articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_
       grid-template: {
         columns: repeat(2, minmax(10px, 1fr));
         rows: repeat(auto-fit, minmax(10px, 1fr));
-
       }
     }
   }
@@ -169,7 +165,6 @@ $articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_
       grid-template: {
         columns: repeat(3, minmax(10px, 1fr));
         rows: repeat(auto-fit, minmax(10px, 1fr));
-
       }
     }
   }
@@ -202,10 +197,7 @@ $articules2_name: aticules_2_PUFF, aticules_2_RAIN, aticules_2_CART, aticules_2_
 
     justify-items: normal;
     text-align: start;
-
   }
-
 }
 
 $footer_name: footer_title, footer_content, footer_contact, footer_buy, footer_social, footer_info;
-

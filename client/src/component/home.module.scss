@@ -1,6 +1,6 @@
 @use "sass:map";
-@use '../scss/abstracts/variables' as v ;
-@use '../scss/abstracts/mixins' as m ;
+@use '../scss/abstracts/variables' as v;
+@use '../scss/abstracts/mixins' as m;
 
 
 @each $home_name in m.$home_name {
@@ -17,24 +17,25 @@
 .detail_container {
   max-height: 100vh;
   display: grid;
+
   grid-template: {
     columns: 1fr;
     rows: auto auto auto;
   }
+
   justify-items: center;
 
-  img{
+  img {
     width: 100px;
     object-fit: cover;
   }
-  h1{
+
+  h1 {
     text-align: center;
   }
-  p{
-    text-align:justify;
+
+  p {
+    text-align: justify;
   }
 
 }
-
-
-

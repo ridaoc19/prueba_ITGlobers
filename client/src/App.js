@@ -6,7 +6,7 @@ import Presentation from './component/presentation/Presentation';
 
 function App() {
   return (
-    <div className="App">
+    <div>
        <Routes>
         <Route path="/" element={<Presentation/>}/>
         <Route path="/home" element={<Home/>}/>

@@ -30,7 +30,7 @@ export default function Carousel(props) {
           <img src={selectedImage} alt="imagen" />
         </div>
         <div className={style.carousel_navbar}>
-        <NavBar/>
+          <NavBar />
         </div>
         <div className={style.carousel_button}>
           <button onClick={previous}>{"<"}</button>

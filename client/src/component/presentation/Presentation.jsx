@@ -8,7 +8,7 @@ export default function Presentation(props) {
     <div>
       <div className={style.presentation_container}>
         <div className={style.presentation_title}>
-          <h1>Proyecto Eccomerce Pufi</h1>
+          <h1>Proyecto Ecommerce Pufi</h1>
           <h6>Creado desde el 19 al 21 septiembre de 2022</h6>
         </div>
         <div className={style.presentation_video}>

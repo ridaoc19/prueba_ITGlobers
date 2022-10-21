@@ -1,5 +1,4 @@
 import images from "../scss/images/images";
-
 export const FORM_REGISTRATION = "FORM_REGISTRATION";
 export const DETAIL_ARTICULES = "DETAIL_ARTICULES";
 export const LOADING = "LOADING";
@@ -15,7 +14,7 @@ export function registration(input) {
       },
     }).then((res) => res.json())
       .catch((error) => console.error("Error:", error))
-      .then((data) => {dispatch({ type: FORM_REGISTRATION, payload: data })});
+      .then((data) => { dispatch({ type: FORM_REGISTRATION, payload: data }) });
   };
 }
 
